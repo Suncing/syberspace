@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jsx小练习</title>
+    <!-- 引入依赖 ,引入的时候，必须就按照这个步骤-->
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- 准备好一个“容器” -->
+    <div id="test"></div>
+    <div id="test0"></div>
+    <script type="text/babel">
+        const data = ['Angular', 'React', 'Vue']
+        const data2 = [<li>Angular</li>, <li>React</li>, <li>Vue</li>]
+        const VDOM0 = (
+            <div>
+                <h1>前端js框架列表</h1>
+                <ul>
+                    {data2}
+                </ul>
+            </div>
+        )
+
+        //1.创建虚拟DOM
+        const VDOM = (
+            <div>
+                <h1>前端js框架列表</h1>
+                <ul>
+                    {
+                        data.map((item, index) => {
+                            return <li key={index}>{item}</li>
+                        })
+                    }
+                </ul>
+            </div>
+        )
+        //2.渲染虚拟DOM到页面
+        ReactDOM.render(VDOM, document.getElementById('test'))
+        ReactDOM.render(VDOM0, document.getElementById('test0'))
+    </script>
+</body>
+
+</html>

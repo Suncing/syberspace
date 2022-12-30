@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello_react</title>
+    <!-- 引入依赖 ,引入的时候，必须就按照这个步骤-->
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <!-- 准备好容器 -->
+    <div id="test"></div>
+    <div id="demo"></div>
+</body>
+
+
+
+<!--这里使用了babel用来解析jsx语法-->
+<script type="text/babel">
+    // 1.创建虚拟DOM,这是jsx语法, 不需要加""
+    const VDOM = (
+        <h1 id="title">
+            <span>Hello,react</span>
+        </h1>
+        ) 
+    // 2.渲染，如果有多个渲染同一个容器，后面的会将前面的覆盖掉
+    ReactDOM.render(VDOM,document.getElementById("test"))   
+    var TDOM=document.getElementById('demo')
+    console.log('虚拟dom',VDOM)
+    console.log('真实dom',TDOM)
+    debugger;
+</script>
+</html>

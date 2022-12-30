@@ -1,0 +1,35 @@
+/* 导航栏样式 */
+.header{
+    background-color: #fff;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    overflow: hidden;
+    height: .3.8rem;
+    border-bottom: 1px solid #ccc;
+    opacity:80%;
+}
+
+/* 导航栏字体 */
+.header-title{
+    font-size: 1.2rem;
+    text-align: left;
+    font-family: Titillium Web,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;;
+    font-weight: 700;
+    opacity: 85%;
+}
+
+/* 导航栏高度 */
+.ant-col{
+    /* 设置多行元素的空间量，如多行文本的间距 */
+    line-height: 2.7rem;
+}
+
+/* 导航栏右侧，间距 */
+.ant-menu-overflow-item {
+    padding-inline: 0.5rem !important;
+}
+
+.ant-menu-title-content{
+    margin-inline-start:0.3rem !important;
+}
+
